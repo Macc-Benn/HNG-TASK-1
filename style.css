@@ -207,7 +207,7 @@
 .hero-content .hero-name {
     color:transparent;
     -webkit-text-stroke-width: 0.5px;
-    /* -webkit-text-stroke-color: rgba(255, 255, 255, 0.3); */
+    -webkit-text-stroke-color: rgba(255, 255, 255, 0.3);
 }
 /* body {
     font-family: Arial, sans-serif;

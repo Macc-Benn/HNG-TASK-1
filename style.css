@@ -1,0 +1,246 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'poppins', sans-serif;
+}
+
+/* Top Navigation Bar */
+.topnavbar {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    padding: 0 15px;
+}
+
+.topnavbar h2 {
+    color: white;
+}
+
+.topnavbar .menu-icon img {
+    width: 'naturalWidth';
+}
+
+.social-links {
+    margin: 0 5px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.navbar {
+    list-style-type: none;
+    position: absolute;
+    width: 100%;
+    top: 80px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    transform: 0.5s;
+    z-index: 9999;
+    /* display: none; */
+}
+
+.topnavbar .navbar li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin-bottom: 10px;
+}
+
+.topnavbar .navbar li:last-child {
+    border: 0;
+}
+
+.topnavbar .navbar li a {
+    color: #fff;
+}
+
+@media(min-width:900px) {
+    .navbar {
+        display: none;
+    }
+
+    .topnavbar {
+        display: none;
+    }
+}
+
+/**** Main Nav Bar And Side Bar****/
+
+.header {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(/images/background.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+
+.sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 260px;
+    background-color: #111;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sidebar .profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sidebar .profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #444;
+    /* object-fit: contain; */
+    box-sizing: 5px 7px 15px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar h2 {
+    margin: 15px 0;
+    color: #fff;
+    font-size: 24px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar ul li {
+    margin: 7px 0;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    transition: 0.5s;
+    position: relative;
+}
+
+.sidebar .nav a:after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: "";
+    width: 0%;
+    height: 3px;
+    background-color: goldenrod;
+    transition: 0.5s;
+}
+
+.sidebar .nav a:hover:after {
+    width: 100%
+}
+
+.sidebar .social-icon:hover {
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: goldenrod;
+    transition: 0.5s;
+    transform: rotate(360deg);
+}
+
+.sidebar .social-icon2:hover {
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: goldenrod;
+    transition: 0.5s;
+    transform: rotate(360deg);
+}
+
+/***** Hero Content *****/
+.hero-content {
+    margin-left: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    max-width: 700px;
+    min-height: 100vh;
+}
+.hero-content h4 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin: 28px;
+}
+
+.hero-content .connect{
+    color: #fff;
+    border: 2px solid goldenrod;
+    border-radius: 30px;
+    padding: 12px 35px;
+    margin: 40px 0;
+    transition: 0.5s;
+}
+
+.hero-content .connect:hover {
+    color: #222;
+    background-color: goldenrod;
+    transition: 0.2s;
+}
+.hero-content .hero-name {
+    color:transparent;
+    -webkit-text-stroke-width: 0.5px;
+    /* -webkit-text-stroke-color: rgba(255, 255, 255, 0.3); */
+}
+/* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main {
+    padding: 1rem;
+}
+
+section {
+    margin-bottom: 1rem;
+}
+
+h2 {
+    color: #4CAF50;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 600px) {
+
+    header,
+    main {
+        padding: 0.5rem;
+    }
+
+    section {
+        margin-bottom: 0.5rem;
+    }
+} */

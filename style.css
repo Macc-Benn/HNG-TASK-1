@@ -14,30 +14,44 @@
     align-items: center;
     background-color: #111;
     padding: 0 15px;
+    gap: 20px;
+    position: relative; 
 }
 
 .topnavbar .logo {
     display: flex;
-    justify-content: center;
+    justify-content: flexc-start;
     align-items: center;
-    flex-direction: column;
+    /* flex-direction: column; */
     position: relative;
+    background-color: red;
+    /* padding-top: 1px; */
+    gap: 5px;
+    width: 50%;
 }
 
 .topnavbar .logo img {
-    width: 150px;
-    height: 150px;
+    width: 15%;
     border-radius: 50%;
     border: 3px solid #444;
-    /* object-fit: contain; */
     box-sizing: 5px 7px 15px rgba(0, 0, 0, 0.2);
+    background-color: blue;
 }
-.topnavbar h2 {
+.topnavbar h3 {
     color: white;
+    position: relative;
 }
 
 .topnavbar .menu-icon img {
     width: 'naturalWidth';
+}
+
+.topnavbar .social-links img:hover {
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: goldenrod;
+    transition: 0.5s;
+    transform: rotate(360deg);
 }
 
 .social-links {
@@ -45,6 +59,7 @@
     display: flex;
     gap: 5px;
     align-items: center;
+    position: relative;
 }
 
 .navbar {
@@ -76,6 +91,30 @@
 .topnavbar .navbar li a {
     color: #fff;
 }
+
+
+.topnavbar .connect {
+    color: #fff;
+    border: 2px solid goldenrod;
+    border-radius: 20px;
+    padding: 7px 7px;
+    margin: 0 10px;
+    transition: 0.5s;
+    position: relative;
+    align-self: center;
+}
+
+.topnavbar .connect .connect-text {
+    font-size: 10px;
+    position: relative;
+}
+
+.topnavbar .connect:hover {
+    color: #222;
+    background-color: goldenrod;
+    transition: 0.2s;
+}
+
 
 /**** Main Nav Bar And Side Bar****/
 
@@ -186,6 +225,7 @@
     max-width: 700px;
     min-height: 100vh;
     gap: 70px;
+    position: relative;
 }
 
 .sub-hero-content1 {
@@ -214,7 +254,7 @@
     margin: 28px;
 }
 
-.hero-content .connect{
+.hero-content .connect {
     color: #fff;
     border: 2px solid goldenrod;
     border-radius: 30px;
@@ -228,8 +268,9 @@
     background-color: goldenrod;
     transition: 0.2s;
 }
+
 .hero-content .hero-name {
-    color:transparent;
+    color:gray;
     -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: rgba(255, 255, 255, 0.3);
 }
@@ -238,9 +279,23 @@
     .sidebar {
     display: none;
     transition: 1s;
-    transform-style: ;
     }
- 
+    .topnavbar .logo h3 {
+    font-size: smaller;
+    margin-top: 5px;
+    align-self: center;
+    }
+    .hero-content {
+    margin: 0px;
+    position: relative;
+    }
+    .sub-hero-content1{
+    align-items: center;
+    }
+    .sub-hero-content1 h1{
+        position: relative;
+        align-items: right;
+    }
 }
 
 @media(min-width:700px) {
@@ -251,7 +306,10 @@
     .topnavbar {
         display: none;
     }
-
+    .hero-name{
+        align-self: center;
+        pad
+    }
 
 }
 /* body {

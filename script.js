@@ -9,3 +9,4 @@ function updateTimeAndDay() {
 
 setInterval(updateTimeAndDay, 1000);
 updateTimeAndDay();
+

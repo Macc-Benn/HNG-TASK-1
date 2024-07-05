@@ -8,13 +8,14 @@
 
 /* Top Navigation Bar */
 .topnavbar {
-    height: 80px;
+    height: 100px;
     display: flex;
     justify-content: space-between 10px;
     align-items: center;
     background-color: #111;
     padding: 0 15px;
     gap: 10px;
+    /* margin-bottom: 20%; */
 }
 
 .topnavbar .logo {
@@ -25,7 +26,6 @@
     background-color: red;
     padding-top: 1px;
     gap: 5px;
-    /* width: 150px; */
 }
 
 .topnavbar .logo img {
@@ -38,6 +38,67 @@
 .topnavbar h3 {
     color: white;
     position: relative;
+}
+
+.topnavbar .time-and-day {
+    color: #fff;
+    font-size: 7px;
+    border: 2px solid goldenrod;
+    border-radius: 20px;
+    padding: 7px 7px;
+    margin: 0 10px;
+    transition: 0.5s;
+    /* position: relative; */
+    align-self: center;
+}
+
+.topnavbar .day {
+    margin-left: 4px;
+}
+
+#menubutton {
+    cursor: pointer;
+    color: #fff;
+    font-size: 7px;
+    border: 2px solid goldenrod;
+    border-radius: 20px;
+    padding: 7px 7px;
+    margin: 0px 4;
+    transition: 0.5s;
+}
+
+#menubutton:hover{ 
+    background-color: goldenrod;
+    color: #111;
+}
+
+#menu {
+    /* margin-top: 20px; */
+    display: none;
+    text-align: left;
+}
+
+#menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#menu ul li {
+    margin: 10px 0;
+}
+
+#menu ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+#menu ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Show menu when not hidden */
+#menu.show {
+    display: block;
 }
 
 .topnavbar .social-links img:hover {
@@ -84,34 +145,6 @@
 
 .topnavbar .navbar li a {
     color: #fff;
-}
-
-
-.topnavbar .time-and-day {
-    color: #fff;
-    font-size: 7px;
-    border: 2px solid goldenrod;
-    border-radius: 20px;
-    padding: 7px 7px;
-    margin: 0 10px;
-    transition: 0.5s;
-    /* position: relative; */
-    align-self: center;
-}
-
-.topnavbar .day {
-    margin-left: 4px;
-}
-
-#menubutton {
-    cursor: pointer;
-    color: #fff;
-    font-size: 5px;
-    border: 2px solid goldenrod;
-    border-radius: 20px;
-    padding: 7px 7px;
-    margin: 0px 4;
-    transition: 0.5s;
 }
 
 /**** Main Nav Bar And Side Bar****/

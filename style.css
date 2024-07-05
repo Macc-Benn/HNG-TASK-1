@@ -25,11 +25,11 @@
     background-color: red;
     padding-top: 1px;
     gap: 5px;
-    width: 50%;
+    /* width: 150px; */
 }
 
 .topnavbar .logo img {
-    width: 15%;
+    width: 50%;
     border-radius: 50%;
     border: 3px solid #444;
     box-sizing: 5px 7px 15px rgba(0, 0, 0, 0.2);

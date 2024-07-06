@@ -10,7 +10,12 @@ function updateTimeAndDay() {
 setInterval(updateTimeAndDay, 1000);
 updateTimeAndDay();
 
-document.getElementById('menubutton').addEventListener('click', function() {
-    const menu = document.getElementById('menu');
-    menu.classList.toggle('show');
-});
+function openNav() {
+    document.getElementById("topmenubar").style.width = "150px";
+    document.querySelector(".main").style.marginLeft = "150px";
+}
+
+function closeNav() {
+    document.getElementById("topmenubar").style.width = "0";
+    document.querySelector(".main").style.marginLeft = "0";
+}

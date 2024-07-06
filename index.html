@@ -22,46 +22,48 @@
         <div data-testid="currentTimeUTC"></div>
         <div data-testid="currentDay" class="day"></div> 
       </div>
-      <select id="menuselect"><span class="menu-text">Menu</span></select>
-      <div id="menu" class="hidden">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About Me</a></li>
-          <li><a href="#">Goals</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-        <div class="social-links">
-          <img  
-            src="/images/facebook.png" 
-            alt="fabebook logo" 
-            width="naturalWidth"
-            height="naturalHeight" 
-          />
-          <img  
-            src="/images/instagram.png" 
-            alt="instagram logo" 
-            width="naturalWidth"
-            height="naturalHeight" 
-          />
-          <img 
-            src="/images/linkedin.png" 
-            alt="linkedin logo" 
-            width="naturalWidth"
-            height="naturalHeight" 
-          />
-          <img 
-            src="/images/slack.png" 
-            alt="slack logo" 
-            width="naturalWidth"
-            height="naturalHeight" 
-          />
-          <img 
-            src="/images/email.png" 
-            alt="email logo" 
-            width="naturalWidth"
-            height="naturalHeight" 
-          />
-        </div>
+      <div id="topmenubar" class="menubar">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> &times;</a>
+          <a href="#">Home</a>
+          <a href="#">About Me</a>
+          <a href="#">Goals</a>
+          <a href="#">Contact</a>
+          <div class="social-links">
+            <img  
+              src="/images/facebook.png" 
+              alt="fabebook logo" 
+              width="naturalWidth"
+              height="naturalHeight" 
+            />
+            <img  
+              src="/images/instagram.png" 
+              alt="instagram logo" 
+              width="naturalWidth"
+              height="naturalHeight" 
+            />
+            <img 
+              src="/images/linkedin.png" 
+              alt="linkedin logo" 
+              width="naturalWidth"
+              height="naturalHeight" 
+            />
+            <img 
+              src="/images/slack.png" 
+              alt="slack logo" 
+              width="naturalWidth"
+              height="naturalHeight" 
+            />
+            <img 
+              src="/images/email.png" 
+              alt="email logo" 
+              width="naturalWidth"
+              height="naturalHeight" 
+            />
+          </div>
+      </div> 
+      <div class="main">
+        <button class="openbtn" onclick="openNav()">☰</button>
+      </div>
       </div>
       </botton>
       </div>

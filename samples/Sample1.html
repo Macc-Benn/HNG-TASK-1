@@ -1,14 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Text</title>
-    <link rel="stylesheet" href="sample2.css">
+    <title>Sliding Sidebar Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Sidebar styles */
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 25px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        /* Main content */
+        .main {
+            transition: margin-left 0.5s;
+            padding: 16px;
+        }
+
+        /* Open button */
+        .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #111;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <p>This is a responsive text that will shrink as the screen size shrinks.</p>
-    </div>
+
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">Item 1</a>
+    <a href="#">Item 2</a>
+    <a href="#">Item 3</a>
+    <a href="#">Item 4</a>
+</div>
+
+<div class="main">
+    <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>
+</div>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.querySelector(".main").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.querySelector(".main").style.marginLeft = "0";
+    }
+</script>
+
 </body>
 </html>

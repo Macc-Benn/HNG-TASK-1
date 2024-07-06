@@ -23,7 +23,6 @@
     justify-content: flex-start;
     align-items: center;
     position: relative;
-    /* background-color: red; */
     padding-top: 1px;
     gap: 5px;
     margin: 10px 0px;
@@ -50,24 +49,29 @@
     margin: 0 10px;
     transition: 0.5s;
     align-self: center;
+    position: fixed;
+    margin-left: 40%;
 }
 
 .topnavbar .day {
-    margin-left: 4px;
+    margin-left: 0px;
 }
 
 .menubar {
-    height: 30vh;
+    height: 40vh;
     width: 50%;
-    position: absolute;
+    position: fixed;
     z-index: 9999;
-    top: 10px;
-    left: 20%;
-    background-color: blue;
+    top: 50px;
+    right: 0%;
+    background-color: gray;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
-    margin-right: 100px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    /* margin-right: 100px; */
 }
 
 .menubar a {
@@ -154,12 +158,11 @@
 }
 
 .social-links {
-    margin: 0 5px;
+    margin: 10px 5px;
     display: flex;
     gap: 5px;
     padding-left: 7.5px;
-    /* align-items: center; */
-    /* position: relative; */
+
 }
 
 /**** Main Nav Bar And Side Bar****/
@@ -271,7 +274,7 @@
 /***** Hero Content *****/
 
 .sub-hero-content1 {
-    background-color: red;
+    /* background-color: red; */
     top: 0;
     margin-top: 20%;
     margin-left: 19vw;
@@ -366,6 +369,9 @@
     display: flex;
     }
 
+    .logo {
+        width: 160px;
+    }
     .logo img {
         border-radius: 20px;
     }

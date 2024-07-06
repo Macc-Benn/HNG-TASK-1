@@ -15,7 +15,7 @@
     background-color: #111;
     padding: 0 15px;
     gap: 10px;
-    /* margin-bottom: 20%; */
+    margin-bottom: 20%;
 }
 
 .topnavbar .logo {
@@ -29,7 +29,7 @@
 }
 
 .topnavbar .logo img {
-    width: 50%;
+    width: 30%;
     border-radius: 50%;
     border: 3px solid #444;
     box-sizing: 5px 7px 15px rgba(0, 0, 0, 0.2);
@@ -273,7 +273,7 @@
 .sub-hero-content1 {
     background-color: red;
     top: 0;
-    margin-top: 10%;
+    /* margin-top: 10%; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -326,9 +326,12 @@
 
     .topnavbar {
     width: 100%;
-    display: inline-flex;
+    display: flex;
     }
 
+    .logo img {
+        border-radius: 20px;
+    }
     .topnavbar .logo h3 {
     font-size: smaller;
     margin-top: 5px;

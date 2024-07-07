@@ -19,10 +19,10 @@
         <h3>M.Benn</h3>
       </div>
       <div class ="time-and-day">
-        <div data-testid="currentTimeUTC"></div>
-        <div data-testid="currentDay" class="day"></div> 
+        <div data-testid="currentTimeUTC1"></div>
+        <div data-testid="currentDay1" class="day"></div> 
       </div>
-      <div id="topmenubar" class="menubar">
+      <div id="topmenubar" class="menubar hidden-menu-bar">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> &times;</a>
           <a href="#">Home</a>
           <a href="#">About Me</a>
@@ -64,10 +64,10 @@
       <div class="main">
         <button class="openbtn" onclick="openNav()">☰</button>
       </div>
-      </div>
+    </div>
 
 
-    <div class="header">
+    <section class="header">
       <div class="wrapper">
         <div class="sidebar">
           <div class="profile">
@@ -83,7 +83,7 @@
           <ul class="nav">
             <li><a href="#">Home</a></li>
             <li><a href="#">About Me</a></li>
-            <li><a href="#">Goals</a></li>
+            <li><a href="#" id="openPopupButton">Goals</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
           <div class ="time-and-day">
@@ -127,68 +127,100 @@
       <div class="hero-content">
         <div class="sub-hero-content1">
             <h4> Welcome </h4>
-            <h1> I'm <span class="hero-name">Mfoniso Ndaobong</span></h1>
+            <h1> 
+              <p class="hero-intro">I'm</p>
+              <p><span class="hero-name">Mfoniso Ndaobong</span></p>
+            </h1>
             <h4>Based in Nigeria.</h4>
-            <a class="connect" href="#">Let's Connect</a>
+            <button class="connect" id="openPopupButton2">View My Goals</button>
+            <section class="useful-links">
+              <h2>Useful Links</h2>
+              <a href="https://hng.tech/learn" target="_blank" data-testid="hngLink">Visit HNG Learn</a>
+              <a href="https://keyword.dog" target="_blank" data-testid="keywordLink">Visit Keyword Dog</a>
+              <a href="https://scrapeanyweb.site" target="_blank" data-testid="scrapeanywebLink">Visit Scrape Any Web</a>
+            </section>
         </div>
-        <!-- <div class="sub-hero-content2">
-          <p><a href="#"> hello</a></p>
-           <p> hello</p>
-            <p> hello</p>
-             <p> hello</p>
-              <p> hello</p>
-               <p> hello</p>
-                <p> hello</p>
-                
-        </div> -->
+      
+      </div>
+      
+    </section>
+    <section class="modal-container hidden" id="popup">
+      <div class="pre-wrapper">
+        <p class="delete"><span class="del-x" id="closePopupButton"><strong>X</strong></span></p>
+      <div class="modal-wrapper">
+        <header>
+          <h1>My Tech Goals for the Next Two Years</h1>
+      </header>
+      <div class="goals">
+          <section id="skill-development">
+              <h2>Skill Development</h2>
+              <ul>
+                  <li>Deepen my knowledge of essential front-end technologies like HTML, CSS, JavaScript, and frameworks/libraries like React, Angular, or Vue.js.</li>
+                  <li>Get comfortable with modern front-end tools and workflows, such as Webpack, Babel, and version control systems like Git.</li>
+                  <li>Learn the fundamentals of UI/UX design to create user-friendly interfaces. Tools like Figma, Sketch, and Adobe XD can be useful.</li>
+              </ul>
+          </section>
+          <section id="hands-on-projects">
+              <h2>Hands-On Projects</h2>
+              <ul>
+                  <li>Develop a portfolio of diverse projects showcasing my skills. This will include personal projects, freelance work, and contributions to open-source projects.</li>
+                  <li>Maximize my learning and experience at Hotels.ng by taking on challenging tasks and projects.</li>
+                  <li>Participate in hackathons and coding competitions to improve my problem-solving skills and network with other professionals.</li>
+              </ul>
+          </section>
+          <section id="career-advancement">
+              <h2>Career Advancement</h2>
+              <ul>
+                  <li>Attend industry conferences, webinars, and meetups. Engage with the tech community on platforms like LinkedIn and GitHub.</li>
+                  <li>Seek out mentors within my company or through tech communities to guide my career development.</li>
+                  <li>Look for junior front-end developer roles that offer growth opportunities and align with my career goals after my internship.</li>
+              </ul>
+          </section>
+          <section id="learning-certifications">
+              <h2>Learning and Certifications</h2>
+              <ul>
+                  <li>Take online courses on advanced front-end development, such as those offered by Coursera, Udemy, or freeCodeCamp.</li>
+                  <li>Consider obtaining certifications in front-end development from recognized institutions or organizations.</li>
+                  <li>Read books and follow tutorials by experts in the field to stay updated on best practices and new technologies.</li>
+              </ul>
+          </section>
+          <section id="specialization-expertise">
+              <h2>Specialization and Expertise</h2>
+              <ul>
+                  <li>Aim to become proficient in JavaScript, including ES6+ features, asynchronous programming, and frameworks/libraries like React or Vue.js.</li>
+                  <li>Learn techniques for optimizing web performance, including lazy loading, code splitting, and efficient rendering.</li>
+                  <li>Understand and implement web accessibility standards to create inclusive web applications.</li>
+              </ul>
+          </section>
+          <section id="entrepreneurial-goals">
+              <h2>Entrepreneurial Goals</h2>
+              <ul>
+                  <li>Learn the basics of entrepreneurship, business planning, and management. Consider taking courses or reading books on these topics.</li>
+                  <li>Connect with other tech entrepreneurs and join startup communities to learn from their experiences.</li>
+                  <li>Start working on side projects that could potentially evolve into a business. Focus on solving real-world problems and validating my ideas.</li>
+              </ul>
+          </section>
+          <section id="community-involvement">
+              <h2>Community Involvement</h2>
+              <ul>
+                  <li>Contribute to open-source projects to build my reputation and collaborate with experienced developers.</li>
+                  <li>Join and actively participate in tech communities, forums, and local meetups to stay connected and informed.</li>
+                  <li>Engage in mentorship programs where I can both learn from others and share my knowledge with beginners.</li>
+              </ul>
+          </section>
+          <section id="continuous-improvement">
+              <h2>Continuous Improvement</h2>
+              <ul>
+                  <li>Regularly read tech blogs, watch webinars, and follow industry leaders to stay informed about the latest trends and technologies.</li>
+                  <li>Seek feedback on my work from peers and mentors, and continuously strive to improve my skills and knowledge.</li>
+              </ul>
+          </section>
       </div>
     </div>
-    <!-- typing effect to title -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
-    <script>
-      var typed= newtyped (".hero-name", {
-        strings: ["Mfoniso Ndaobong", "An Aspiring Front-End Developer"],
-        typeSpeed: 65,
-        backspeed: 55,
-        loop: true
-      })
-     </script> -->
-    
-    <!-- <header>
-      <h1>My Tech Goals</h1>
-    </header>
-    <main>
-      <section>
-        <h2>Personal Information</h2>
-        <p data-testid="slackDisplayName">Your Slack Name</p>
-        <p data-testid="slackEmail">
-        <a href="mfoniso.ndaobong@gmail.com">Email Me</a>
-        </p>
-        <p>
-          <img
-            src="/images/about-me1.jpg"
-            data-testid="slackProfilePicture"
-            alt="Slack Profile Picture"
-            width="naturalWidth"
-            height="naturalHeight"
-          />
-        </p>
-      </section>
-
-      <section>
-        <h2>Current Information</h2>
-        <p data-testid="currentTimeUTC"></p>
-        <p data-testid="currentDay"></p>
-      </section>
-      <section>
-        <h2>Useful Links</h2>
-        <a href="https://hng.tech/learn" data-testid="hngLink">HNG Learn</a>
-        <a href="https://keyword.dog" data-testid="keywordLink">Keyword Dog</a>
-        <a href="https://scrapeanyweb.site" data-testid="scrapeanywebLink"
-          >Scrape Any Web</a
-        >
-      </section> -->
-    </main>
+    <div class="foot"></div>
+    </div>
+    </section>
+  
     <script src="script.js"></script>
   </body>
 </html>

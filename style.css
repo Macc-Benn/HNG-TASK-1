@@ -6,16 +6,19 @@
     font-family: 'poppins', sans-serif;
 }
 
-/* Top Navigation Bar */
+/****** Top Navigation Bar ******/
+
 .topnavbar {
-    display: flex;
+    position: fixed;
     justify-content: space-between;
     align-items: center;
     background-color: #111;
     border-color: black;
     padding: 0 15px;
     gap: 10px;
+    z-index: 100;
     background-size: contain;
+    display: flex
 }
 
 .topnavbar .logo {
@@ -33,7 +36,6 @@
     border-radius: 50%;
     border: 3px solid #444;
     box-sizing: 5px 7px 15px rgba(0, 0, 0, 0.2);
-    background-color: blue;
 }
 .topnavbar h3 {
     color: white;
@@ -57,6 +59,10 @@
     margin-left: 0px;
 }
 
+.hidden-menu-bar{
+    display: none;
+}
+
 .menubar {
     height: 40vh;
     width: 50%;
@@ -71,7 +77,6 @@
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    /* margin-right: 100px; */
 }
 
 .menubar a {
@@ -95,60 +100,6 @@
     margin-left: 50px;
 }
 
-.main {
-    transition: margin-left 0.5s;
-}
-
-/* #menuselect{
-    cursor: pointer;
-    color: grey;
-    font-size: 10px;
-    border: 1px solid goldenrod;
-    border-radius: 9px;
-    padding: 10px 10px;
-    margin: 0px 10px;
-    transition: 0.5s;
-    background-color: #111;
-}
-
-#menuselect:hover { 
-    background-color: goldenrod;
-    color: #111;
-}
-#menuselect::after{
-    background-color: #111;
-    border: goldenrod;
-}
-
-#menu {
-    margin-top: 50px;
-    display: none;
-    text-align: left;
-    /* z-index: 9999; */
-/* }
-
-#menu ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#menu ul li {
-    margin: 10px 0;
-}
-
-#menu ul li a {
-    text-decoration: none;
-    color: #333;
-}
-
-#menu ul li a:hover {
-    text-decoration: underline;
-}
-
-#menu.show {
-    display: block;
-} */
-
 .menubar .social-links img:hover {
     cursor: pointer;
     border-radius: 10px;
@@ -162,17 +113,17 @@
     display: flex;
     gap: 5px;
     padding-left: 7.5px;
-
 }
 
-/**** Main Nav Bar And Side Bar****/
+/**** Main Nav Bar And Side Bar ****/
 
 .header {
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(/images/background.jpg);
     background-size: cover;
     width: 100%;
-    min-height: 100%;
     display: flex;
+    height: 100vh;
+    position: relative;
 }
 
 .wrapper {
@@ -246,6 +197,22 @@
     width: 100%
 }
 
+.sidebar .time-and-day {
+    color: #fff;
+    font-size: 10px;
+    border: 2px solid goldenrod;
+    border-radius: 20px;
+    padding: 7px 7px;
+    margin: 0 10px;
+    transition: 0.5s;
+    align-self: center;
+    position: relative;
+}
+
+.sidebar .day {
+    margin-left: 0px;
+}
+
 .sidebar .social-icon1:hover {
     cursor: pointer;
     border-radius: 10px;
@@ -274,7 +241,6 @@
 /***** Hero Content *****/
 
 .sub-hero-content1 {
-    /* background-color: red; */
     top: 0;
     margin-top: 20%;
     margin-left: 19vw;
@@ -286,48 +252,8 @@
     box-sizing: border-box;
     min-width: 250px;
     padding: 10px;
-    /* margin-right:10vw; */
 }
 
-/* .sub-hero-content1 {
-    background-color: red;
-    top: 0;
-    margin-top: 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: #fff;
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 900px;
-    padding: 10px;
-    margin-right: 100%;
-} */
-
-/* top: 0;
-    margin-top: 20%;
-    margin-left: 20%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    color: #fff;
-    width: 100%;
-    height: 150%;
-    margin: 25% 25% 25% 25%;
-    max-width: 700px;
-    min-height: 100vh;
-    gap: 70px;
-    position: relative;
-    box-sizing: border-box;
-    background-color: red;
-    padding: 20px;
-*/
-    
-/* .sub-hero-content2 {
-    background-color: blue;
-} */
 .hero-content h4 {
     font-size: 24px;
     font-weight: 400;
@@ -338,8 +264,13 @@
     padding: 28px;
 }
 
+.sub-hero-content1 .hero-intro{
+    margin-left: 110px;
+}
+
 .hero-content .connect {
     color: #fff;
+    background-color: transparent;
     border: 2px solid goldenrod;
     border-radius: 30px;
     padding: 12px 35px;
@@ -351,6 +282,7 @@
     color: #222;
     background-color: goldenrod;
     transition: 0.2s;
+    cursor: pointer;
 }
 
 .hero-content .hero-name {
@@ -358,65 +290,191 @@
     -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: rgba(255, 255, 255, 0.3);
 }
+
+
+/************* USEFUL LINKS ***********/
+
+.useful-links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.useful-links a {
+    color: goldenrod
+}
+
+.useful-links a:hover {
+    color: white;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.useful-links h2{
+    color: gray;
+}
+
+
+/*************** MODAL ************/
+
+.modal-container{
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    backdrop-filter: blur(2px);
+    padding: 20px;
+    z-index: 2;
+    top: 0;
+    height: 100vh
+}
+
+.hidden{
+    display: none;
+}
+
+.delete{
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+    padding-right: 20px;
+    padding-top: 10px;
+}
+
+.modal-wrapper{
+    padding: 30px;
+    background-color: white;
+    height: 600px;
+    overflow-y: scroll;
+    border-radius: 10px;
+}
+
+.pre-wrapper{
+    background-color: white;
+    width: 800px;
+    border-radius: 20px;
+}
+
+.modal-wrapper header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.goals {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.foot{
+    height: 16px;
+}
+
+.delete .del-x:hover{
+    cursor: pointer;
+    color: goldenrod
+}
+
+.goals h1, h2 {
+    color: #333;
+}
+
+.goals ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.goals ul li {
+    background: #e4e4e4;
+    margin: 10px 0;
+    padding: 10px;
+    border-left: 5px solid #333;
+}
+
+.goals footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #333;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
 /**** Responsive  ****/
+
 @media (max-width: 700px) {
-    /* body{
-    width: auto;
-    } */
 
     .topnavbar {
-    width: 100%;
-    display: flex;
+        width: 100%;
+        display: flex;
     }
 
     .logo {
         width: 160px;
     }
+
     .logo img {
         border-radius: 20px;
     }
+
     .topnavbar .logo h3 {
-    font-size: smaller;
-    margin-top: 5px;
-    align-self: center;
+        font-size: smaller;
+        margin-top: 5px;
+        align-self: center;
     }
 
     .header{
-    min-height: 900px;
-    background-position: center;
-    /* background-size: cover; */
+        min-height: 900px;
+        background-position: center;
     }
+
     .sidebar {
-    display: none;
+        display: none;
     }
+
     .sub-hero-content1{
         font-size: smaller;
-    /* font-size: calc(16px + 1vw); */
-    margin: 10% 10%;
-    }
-    /* .hero-content {
-    width: 50px 50px;
-    position: relative;
+        margin: 30% 10%;
     }
 
-    .sub-hero-content1 {
-    align-items: center;
-    width: auto;
+    .sub-hero-content1 .hero-intro{
+        margin-left: 90px;
     }
 
-    .hero-content .sub-hero-content1 h1{
-    position: relative;
-    align-items: center;
-    } */
+    .sub-hero-content1 .hero-name{
+        font-size: 50px;
+    }
+
+    .pre-wrapper{
+        width: 300px;
+        height: 500px;
+        margin-top: 30%;
+    }
+
+    .modal-wrapper{
+        height: 500px;
+        overflow-y: scroll;
+    }
 }
-/* 
-@media (max-width:200) {
-    body{
-        width: fit-content;
-    }
-} */
 
 @media(min-width:700px) {
+
     .navbar {
         display: none;
     }
@@ -426,6 +484,27 @@
     }
 
     .hero-name{
-    position: relative;
+        position: relative;
+    }
+
+    .pre-wrapper{
+        width: 700px;
+    }
+
+    .modal-wrapper{
+        overflow-y: scroll;
+    }   
+}
+
+@media (width: 1024px){
+    
+    .sub-hero-content1{
+        width: 500px;
+        margin-left: 100px;
+        margin-top: 200px;
+    }
+
+    .sub-hero-content1 h1{
+        font-size: 30px;
     }
 }

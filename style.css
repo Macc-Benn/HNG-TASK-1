@@ -86,6 +86,7 @@
     color: white;
     display: block;
     transition: 0.3s;
+    cursor:pointer;
 }
 
 .menubar a:hover {
@@ -264,7 +265,7 @@
     padding: 28px;
 }
 
-.sub-hero-content1 .hero-intro{
+.sub-hero-content1 .hero-intro {
     margin-left: 110px;
 }
 
@@ -331,14 +332,14 @@
     padding: 20px;
     z-index: 2;
     top: 0;
-    height: 100vh
+    height: 100vh;
 }
 
-.hidden{
+.hidden {
     display: none;
 }
 
-.delete{
+.delete {
     display: flex;
     justify-content: flex-end;
     padding: 5px;
@@ -386,7 +387,8 @@
 
 .delete .del-x:hover{
     cursor: pointer;
-    color: goldenrod
+    color: goldenrod;
+
 }
 
 .goals h1, h2 {

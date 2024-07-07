@@ -25,13 +25,25 @@ function closeNav() {
     document.querySelector(".main").style.marginLeft = "0";
 }
 
-document.getElementById('openPopupButton').addEventListener('click', function() {
+    document.getElementById('openPopupButton').addEventListener('click', function() {
     document.getElementById('popup').classList.remove('hidden');
 });
-document.getElementById('openPopupButton2').addEventListener('click', function() {
+    document.getElementById('openPopupButton2').addEventListener('click', function() {
+    document.getElementById('popup').classList.remove('hidden');
+});
+    document.getElementById('openPopupButton1').addEventListener('click', function() {
     document.getElementById('popup').classList.remove('hidden');
 });
 
-document.getElementById('closePopupButton').addEventListener('click', function() {
+
+    document.getElementById('closePopupButton').addEventListener('click', function() {
     document.getElementById('popup').classList.add('hidden');
 });
+    document.getElementById('closePopupButton2').addEventListener('click', function() {
+    document.getElementById('popup').classList.add('hidden');
+});
+    document.getElementById('closePopupButton1').addEventListener('click', function() {
+    document.getElementById('popup').classList.add('hidden');
+});
+
+
